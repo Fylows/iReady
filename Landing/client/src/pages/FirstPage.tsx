@@ -64,11 +64,11 @@ export const FirstPage = (): JSX.Element => {
         }`}
       >
         {/* Hero Section: Map + Info Panel */}
-        <section className="flex flex-col lg:flex-row min-h-[500px] md:min-h-[630px] flex flex-col justify-center text-center">
+        <section className="min-h-[500px] md:min-h-[630px] grid grid-cols-1 lg:grid-cols-[70%_30%] items-stretch">
           {/* Map Container - Takes up ~70% width on large screens, full width on mobile */}
-          <div className="w-full lg:w-[70%] h-[400px] md:h-[500px] lg:h-[630px] relative z-0 overflow-hidden rounded-xl">
+          <div className="w-full h-full relative z-0 overflow-hidden box-border">
             {/* Forecast-style typhoon animation overlayed on the map */}
-            <PhilippinesMap className="w-full h-full" />
+            <PhilippinesMap className="w-full h-full rounded-none" />
             {/* Animated isobars and wind streaks */}
             <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-white/0 pointer-events-none" />
@@ -85,7 +85,7 @@ export const FirstPage = (): JSX.Element => {
           </div>
 
           {/* Right Info Panel - Takes up ~30% width on large screens */}
-          <div className="w-full lg:w-[30%] flex flex-col gap-4 p-4 md:p-6 bg-gray-50">
+          <div className="w-full h-full flex flex-col gap-4 p-6 md:p-10 bg-gray-50 box-border justify-center">
             {/* Call to Action Card */}
             <div className="bg-gray-200 rounded-2xl p-6 md:p-8">
               <h2 className="text-2xl md:text-4xl font-extrabold mb-4 text-black">

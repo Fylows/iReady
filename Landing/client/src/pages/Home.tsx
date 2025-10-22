@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from "react";
 import { MapContainer, TileLayer, CircleMarker, Circle, Polyline, Popup as LeafletPopup, Tooltip as LeafletTooltip, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -800,9 +801,9 @@ export const Home = (): JSX.Element => {
 
 
       {/* Main Content (pad for fixed header) */}
-      <div className="flex h-full pt-16 md:pt-20 lg:pt-24">
+      <div className="pt-18 md:pt-20 lg:pt-24 min-h-[500px] md:min-h-[630px] grid grid-cols-1 lg:grid-cols-[70%_30%] items-stretch">
         {/* Map Section */}
-        <div className="relative sticky top-16 md:top-20 lg:top-24 shrink-0 bg-[#d9d9d9] border border-solid border-black w-[940px] h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-center justify-center">
+        <div className="relative sticky top-16 md:top-20 lg:top-24 shrink-0 bg-[#d9d9d9] h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-center justify-center">
           <MapContainer
             center={[mapCenter.lat, mapCenter.lon]}
             zoom={mapZoom}
@@ -950,7 +951,7 @@ export const Home = (): JSX.Element => {
 
 
         {/* Right Sidebar */}
-  <div className="flex-1 h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] overflow-y-auto px-8 py-6">
+      <div className="w-full h-full flex flex-col gap-4 p-6 md:p-10 bg-gray-50 box-border justify-center">
           {/* Barangay Search */}
           <div className="mb-6">
             <div className="relative bg-[#e6e6e6] rounded-[23px] p-4">
